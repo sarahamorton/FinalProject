@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="finalstyle.css" type="text/css">
+    <title>The Great Hot Air Balloon Race</title>
+    <h1>The Great Hot Air Balloon Race</h1>
+    <script type="text/javascript">
+        function stopLight() {
+            document.getElementById('redlight').src = "green.png";
+            document.getElementById("myContainer2").style.visibility = "hidden";
+        }
+        function myMoveOne() {
+            var elem = document.getElementById("balloon1");
+            var pos = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (pos == 1300) {
+                    clearInterval(id);
+                    if (pos >= 1300) document.getElementById('redlight').src = "red.jpg";
+                    if (pos >= 1300) document.getElementById("myContainer").style.visibility = "hidden";
+                    if (pos >= 1300) document.getElementById("myContainer2").style.visibility = "visible";
+                } else {
+                    pos++;
+                    elem.style.left = pos + 'px';
+                }
+            }
+         }
+
+        function myMoveTwo() {
+            var elem = document.getElementById("balloon2");
+            var pos = 0;
+            var id = setInterval(frame, 20);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+        function myMoveThree() {
+            var elem = document.getElementById("balloon3");
+            var pos = 0;
+            var id = setInterval(frame, 7);
+            function frame() {
+                if (pos == 1300) {
+                    if (pos >= 1300) document.getElementById("myContainer").style.visibility = "visible";
+                    clearInterval(id);
+                } else{
+                    pos++;
+                elem.style.left = pos + 'px';
+            }
+        }
+    }
+        function startNew() {
+            document.getElementById("myContainer").style.visibility = "hidden";
+        }
+        startNew()
+        myMoveOne();
+        myMoveTwo();
+        myMoveThree();
+
+    </script>
+</head>
+<body>
+<img class="balloon" id="balloon1" src="balloon3.png" alt="balloon3"/>
+    <br>
+<img class="balloon" id="balloon2" src="balloon2.png" alt="balloon2"/>
+<br>
+<img class="balloon" id="balloon3" src="balloon1.png" alt="balloon1"/>
+<div id="myContainer">The winner is Balloon 3!!! </div>
+<div id="myContainer2">Click the stoplight to restart the race. </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+<img id="redlight" src="red.jpg" alt="red.jpg" onclick="stopLight();myMoveOne();myMoveTwo();myMoveThree();"/>
+</body>
+</html>

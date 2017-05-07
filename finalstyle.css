@@ -1,0 +1,74 @@
+body{
+    background-image: url("1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+
+h1{
+    font-size: 300%;
+    font-family: Candara;
+    color: #ff5c33;
+    text-shadow: 1px 1px white;
+    text-align: center;
+}
+#myContainer2{
+    margin-top: -50px;
+}
+#myContainer, #myContainer2{
+    visibility: hidden;
+    position: relative;
+    margin-left: 28%;
+    z-index: -1;
+    width: 600px;
+    height: 50px;
+    color: #ff5c33;
+    border: 5px solid #ff5c33;
+    padding: 5px;
+    font-family: Candara;
+    background-color: #ffff80;
+    text-shadow: 1px 1px white;
+    text-align: center;
+    font-size: 200%;
+}
+#greenlight{
+    position: relative;
+    float: left;
+    margin-left: 5%;
+    margin-top: 23%;
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#redlight{
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    margin-top: %;
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#balloon1{
+    position: relative;
+    width: 45px;
+    height: 70px;
+    float: left;
+}
+#balloon2{
+    position: relative;
+    width: 50px;
+    height: 75px;
+}
+#balloon3{
+    position:relative;
+    width: 50px;
+    height: 75px;
+}
+
+#race{
+    display: flex;
+    vertical-align:
+}
